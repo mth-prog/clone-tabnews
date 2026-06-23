@@ -7,7 +7,7 @@ jobs:
     name: Jest
     runs-on: Ubuntu-latest
     steps:
-      - uses: actions/chekout@v4
+      - uses: actions/checkout@v4
 
 
       - uses: actions/setup-node@v4
