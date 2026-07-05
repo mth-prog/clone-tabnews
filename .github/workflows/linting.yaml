@@ -3,7 +3,7 @@ name: Linting
 on: pull_request
 
 jobs:
-  jest: 
+  jest:
     name: Prettier
     runs-on: Ubuntu-latest
     steps:
@@ -12,6 +12,5 @@ jobs:
         with:
           node-version: 18.20.8
 
-      - run: npm ci 
+      - run: npm ci
       - run: npm run lint:prettier:check
-  
