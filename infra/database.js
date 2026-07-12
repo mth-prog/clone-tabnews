@@ -1,4 +1,5 @@
 import { Client } from "pg";
+import process from "node:process";
 
 async function query(queryObject) {
   let client;

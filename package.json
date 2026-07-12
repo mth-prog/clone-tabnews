@@ -20,6 +20,7 @@
     "service:stop": "docker compose -f infra/compose.yaml stop",
     "lint:prettier:check": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
+    "lint:eslint:check": "eslint .",
     "test": "npm run service:up && npm run wait-for-postgres && concurrently -n next,jest --hide next -k -s command-jest \"next dev\" \"jest --runInBand\"",
     "test:watch": "jest --watchAll --runInBand",
     "migration:create": "node-pg-migrate --migrations-dir infra/migrations create",
@@ -38,6 +39,9 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
+    "eslint": "9.39.5",
+    "eslint-plugin-jest": "^28.14.0",
+    "eslint-plugin-prettier": "^5.5.6",
     "jest": "^30.2.0",
     "prettier": "^3.6.2"
   }
