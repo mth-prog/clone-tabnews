@@ -5,7 +5,7 @@ import jest from "eslint-plugin-jest";
 import prettier from "eslint-plugin-prettier";
 
 export default defineConfig([
-  { ignores: [".next/**", "node_modules/**", "dist/**"] },
+  { ignores: [".next/**", "node_modules/**", "dist/**", "jest.config.js"] },
   { files: ["**/*.js"], languageOptions: { globals: globals.browser } },
   { files: ["**/*.js"], plugins: { js }, extends: ["js/recommended"] },
   {

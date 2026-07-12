@@ -1,4 +1,5 @@
 import database from "infra/database.js";
+import process from "node:process";
 
 async function status(request, response) {
   const updateAt = new Date().toISOString();
