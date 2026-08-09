@@ -20,7 +20,7 @@ export default defineConfig([
     rules: { ...jest.configs.recommended.rules },
   },
   {
-    files: ["infra/scripts/**/*.js", "jest.config.js"],
+    files: ["infra/scripts/**/*.js", "jest.config.js", "commitlint.config.js"],
     languageOptions: {
       globals: globals.node,
       ecmaVersion: "latest",
