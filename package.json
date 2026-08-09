@@ -19,7 +19,7 @@
     "service:down": "docker compose -f infra/compose.yaml down",
     "service:stop": "docker compose -f infra/compose.yaml stop",
     "lint:prettier:check": "prettier --check .",
-    "lint:prettier:fix": "prettier --write .",
+    "lint:prettier:fix": "prettier --write C:/workspace/clone-tabnews/commitlint.config.js",
     "lint:eslint:check": "eslint .",
     "test": "npm run service:up && npm run wait-for-postgres && concurrently -n next,jest --hide next -k -s command-jest \"next dev\" \"jest --runInBand\"",
     "test:watch": "jest --watchAll --runInBand",
@@ -38,6 +38,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "concurrently": "^8.2.2",
     "eslint": "9.39.5",
     "eslint-plugin-jest": "^28.14.0",
