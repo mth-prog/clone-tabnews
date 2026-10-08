@@ -16,7 +16,7 @@
   "scripts": {
     "predev": "",
     "dev": "npm run service:up && npm run service:wait:database && npm run migrations:up && next dev",
-    "postdev":"npm run service:stop",
+    "postdev": "npm run service:stop",
     "service:up": "docker compose -f infra/compose.yaml up -d",
     "service:down": "docker compose -f infra/compose.yaml down",
     "service:stop": "docker compose -f infra/compose.yaml stop",
