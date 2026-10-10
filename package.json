@@ -26,9 +26,9 @@
     "lint:prettier:check": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
     "lint:eslint:check": "eslint .",
-    "test": "npm run service:up && npm run service:wait:database && concurrently -n next,jest --hide next -k -s command-jest \"next dev\" \"jest --runInBand\"",
+    "test": "npm run service:up && npm run service:wait:database && concurrently -n next,jest --hide next -k -s command-jest \"next dev\" \"jest --runInBand --verbose\"",
     "posttest": "npm run service:down",
-    "test:watch": "jest --watchAll --runInBand",
+    "test:watch": "jest --watchAll --runInBand --verbose",
     "prepare": "husky"
   },
   "dependencies": {
